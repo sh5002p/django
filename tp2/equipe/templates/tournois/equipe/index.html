@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+</head>
+<body>
+<h1> Bienvenue sur la liste des tournois</h1>
+<a href="/tournois/ajout/"> ajouter une équipe participant au tournois</a>
+<ol>
+    {% for l in liste %}
+        <li> {{ l }}  <a href="/tournois/affiche/{{ l.id }}/"> affiche</a>  <a href="/tournois/update/{{ l.id }}/">| mettre à jour </a> <a href="/tournois/delete/{{ l.id }}/">| supprimer </a></li></li>
+    {% endfor %}
+</ol>
+</body>
+</html>

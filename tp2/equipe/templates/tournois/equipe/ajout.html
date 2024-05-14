@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>formulaire de saisie</title>
+</head>
+<body>
+    <h1>Saisie d'une nouvelle équipe participant au tournois</h1>
+        {% if id != "" %}
+            <form method="post" action="/tournois/updatetraitement/{{ id }}/" >
+        {% else %}
+            <form method="post" action="/tournois/traitement/" >
+        {% endif %}
+
+        {% csrf_token %}
+        {{ form.as_ul }}
+        <input type="submit" value="envoyer les données"/>
+    </form>
+</body>
+</html>
